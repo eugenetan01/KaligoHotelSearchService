@@ -8,7 +8,7 @@ To call the service, you can either fetch via
 2. list of hotel ids 
 
 to fetch by 
-  - destination id, GET is as follow: http://localhost:8080/kaligoSearch?destinationid="<input>"
+  - destination id, GET is as follow: http://localhost:8080/kaligoSearch?destinationid=< input >
   - array of hotel ids, GET is as follow: http://localhost:8080/kaligoSearch?destinationid=&ids=<input1, input2, ...> 
   
  result set returned will aggregate results from all 3 API sources and structure in below format:
