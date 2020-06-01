@@ -19,7 +19,7 @@ public class SearchController {
     public ArrayList<Response> kaligoSearch(@RequestParam Optional<String> destinationid, @RequestParam Optional<String[]> ids) {
 
         for(int i = 0; i< HTTPUtility.APIEndpoints.size(); i++){
-            HTTPUtility.http(HTTPUtility.getURL(i), i);
+            HTTPUtility.http(i);
         }
 
         ArrayList<Response> fullResult =  DataUtility.cleanDataS3();

@@ -25,9 +25,10 @@ public class HTTPUtility {
     }
 
 
-    public static int http(String url, int supplierId) {
+    public static int http(int supplierId) {
 
         try (CloseableHttpClient httpClient = HttpClientBuilder.create().build()) {
+            String url = HTTPUtility.getURL(supplierId);
             HttpPost request = new HttpPost(url);
             request.addHeader("content-type", "application/json");
             HttpResponse result = httpClient.execute(request);
